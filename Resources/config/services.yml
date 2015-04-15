@@ -1,0 +1,6 @@
+parameters:
+    la_fourchette_pager_duty.factory.event.class: LaFourchette\PagerDutyBundle\Factory\EventFactory
+
+services:
+    la_fourchette_pager_duty.factory.event:
+        class: %la_fourchette_pager_duty.factory.event.class%

@@ -1,0 +1,20 @@
+{
+    "name": "lafourchette/pager-duty-bundle",
+    "description": "Trigger PagerDuty events easily from your Symfony2 application.",
+    "require": {
+        "nmcquay/pagerduty": "0.1.*",
+        "symfony/framework-bundle": ">=2.0 <2.2",
+        "symfony/console": ">=2.0 <2.2"
+    },
+    "require-dev": {
+        "phpunit/phpunit": "~4.6",
+        "phpspec/prophecy": "~1.0"
+    },
+    "suggested": {
+        "liip/monitor-bundle": "Use Check to trigger a PagerDuty alert"
+    },
+    "autoload": {
+        "psr-0": { "LaFourchette\\PagerDutyBundle": "" }
+    },
+    "target-dir": "LaFourchette/PagerDutyBundle"
+}
