@@ -17,7 +17,7 @@ class EventFactoryTest extends ProphecyTestCase
 
     public function testMake()
     {
-        $serviceKey = array_shift(str_split(md5('foobar'), 32));
+        $serviceKey = '3858f62230ac3c915f300c664312c63f';
         $dut = new EventFactory();
         $dut->setServiceDefinitions(array(
             'foo' => array('key' => $serviceKey)
