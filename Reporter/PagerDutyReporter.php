@@ -2,6 +2,7 @@
 
 namespace LaFourchette\PagerDutyBundle\Reporter;
 
+use LaFourchette\PagerDutyBundle\Check\PagerDutyCheckInterface;
 use LaFourchette\PagerDutyBundle\Factory\EventFactory;
 use ZendDiagnostics\Result\Failure;
 use ZendDiagnostics\Runner\Reporter\ReporterInterface;
@@ -27,8 +28,13 @@ class PagerDutyReporter implements ReporterInterface
      */
     public function onAfterRun(CheckInterface $check, ResultInterface $result, $checkAlias = null)
     {
+        if (! $check instanceof PagerDutyCheckInterface) {
+            return;
+        }
+
         if ($result instanceof Failure) {
             try{
+                $checkAlias = $check->getPagerDutyAlias();
                 $event = $this->pagerDuty->make($checkAlias, $result->getMessage());
                 $event->trigger();
             } catch(\Exception $e) {
