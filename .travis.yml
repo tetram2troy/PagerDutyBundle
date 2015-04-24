@@ -13,6 +13,14 @@ matrix:
     - php: 5.3
       env: SYMFONY_VERSION=2.1.*
 
+script: phpunit --coverage-clover=coverage.clover
+
+after_script:
+  - wget https://scrutinizer-ci.com/ocular.phar
+  - php ocular.phar code-coverage:upload --format=php-clover coverage.clover
+
 before_script:
   - composer require symfony/framework-bundle:${SYMFONY_VERSION} --prefer-source
   - composer require symfony/console:${SYMFONY_VERSION} --prefer-source
+  - composer require liip/monitor-bundle:* --prefer-source
+  - composer require zendframework/zenddiagnostics:* --prefer-source
