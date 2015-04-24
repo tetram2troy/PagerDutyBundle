@@ -1,6 +1,8 @@
 # PagerDutyBundle
 
 [![Build Status](https://travis-ci.org/lafourchette/PagerDutyBundle.svg?branch=master)](https://travis-ci.org/lafourchette/PagerDutyBundle)
+[![Code Coverage](https://scrutinizer-ci.com/g/lafourchette/PagerDutyBundle/badges/coverage.png?b=master)](https://scrutinizer-ci.com/g/lafourchette/PagerDutyBundle/?branch=master)
+[![Scrutinizer Code Quality](https://scrutinizer-ci.com/g/lafourchette/PagerDutyBundle/badges/quality-score.png?b=master)](https://scrutinizer-ci.com/g/lafourchette/PagerDutyBundle/?branch=master)
 
 Trigger PagerDuty events easily from your Symfony2 application.
 
