@@ -11,12 +11,19 @@ use ZendDiagnostics\Check\CheckInterface;
 use ZendDiagnostics\Result\ResultInterface;
 use ZendDiagnostics\Result\Collection as ResultsCollection;
 
+/**
+ * PagerDuty reporter for the LiipMonitorBundle.
+ */
 class PagerDutyReporter implements ReporterInterface
 {
     private $pagerDuty;
 
     private $logger;
 
+    /**
+     * @param EventFactory $pagerDuty Event factory.
+     * @param LoggerInterface $logger
+     */
     public function __construct(EventFactory $pagerDuty, LoggerInterface $logger)
     {
         $this->pagerDuty = $pagerDuty;
@@ -74,4 +81,4 @@ class PagerDutyReporter implements ReporterInterface
     {
         return;
     }
-} 
+}

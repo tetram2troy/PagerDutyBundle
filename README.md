@@ -12,6 +12,8 @@ la_fourchette_pager_duty:
         my_service_alias: {key: "the 32 char GUID provided by PagerDuty"}
 ```
 
+You'll find the service GUID at ```https://<your subdomain>.pagerduty.com/services```
+
 Then somewhere in your code where something really bad happens:
 ```php
 $event = $this->get('la_fourchette_pager_duty.factory.event')
@@ -19,6 +21,14 @@ $event = $this->get('la_fourchette_pager_duty.factory.event')
 
 // @throw PagerDuty\EventException if PagerDuty API 500s
 $event->trigger();
+```
+
+## LiipMonitor compatibility
+If you're using liip/monitor-bundle, you're provided a "pagerduty" reporter which triggers PagerDuty on failures.
+You're just required to implement the ```Check/PagerDutyCheckInterface```.
+```bash
+# Trigger pager duty on failed checks
+app/console monitor:health --reporter=pagerduty
 ```
 
 ## Installation

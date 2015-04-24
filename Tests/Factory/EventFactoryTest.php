@@ -5,7 +5,7 @@ namespace LaFourchette\PagerDutyBundle\Tests\Factory;
 use LaFourchette\PagerDutyBundle\Factory\EventFactory;
 use LaFourchette\PagerDutyBundle\Tests\ProphecyTestCase;
 
-class EventFactoryTest extends ProphecyTestCase
+class EventFactoryTest extends \PHPUnit_Framework_TestCase
 {
     public function testMakeUnknownService()
     {

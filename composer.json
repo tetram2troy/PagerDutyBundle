@@ -11,7 +11,8 @@
         "phpspec/prophecy": "~1.0"
     },
     "suggested": {
-        "liip/monitor-bundle": "Use Check to trigger a PagerDuty alert"
+        "liip/monitor-bundle": "Use Check to trigger a PagerDuty alert",
+        "zendframework/zenddiagnostics": "liip/monitor-bundle requires it sometimes"
     },
     "autoload": {
         "psr-0": { "LaFourchette\\PagerDutyBundle": "" }

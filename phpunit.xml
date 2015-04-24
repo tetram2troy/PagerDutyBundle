@@ -3,7 +3,7 @@
 <phpunit bootstrap="./Tests/bootstrap.php" colors="true">
 
     <testsuites>
-        <testsuite name="arf">
+        <testsuite name="tests">
             <directory suffix="Test.php">./Tests</directory>
         </testsuite>
     </testsuites>

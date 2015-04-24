@@ -10,6 +10,9 @@ use Symfony\Component\Console\Output\OutputInterface;
 
 class PagerDutyEventCommand extends ContainerAwareCommand
 {
+    /**
+     * {@inheritdoc}
+     */
     protected function configure()
     {
         $this
@@ -21,6 +24,9 @@ class PagerDutyEventCommand extends ContainerAwareCommand
         ;
     }
 
+    /**
+     * {@inheritdoc}
+     */
     protected function execute(InputInterface $input, OutputInterface $output)
     {
         //$action = $input->getArgument('action');

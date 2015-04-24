@@ -2,14 +2,15 @@
 
 namespace LaFourchette\PagerDutyBundle\Tests\Reporter;
 
-use LaFourchette\PagerDutyBundle\Tests\ProphecyTestCase;
 use LaFourchette\PagerDutyBundle\Reporter\PagerDutyReporter;
 use Prophecy\Argument;
 use ZendDiagnostics\Result\Success;
 
-class PagerDutyReporterTest extends ProphecyTestCase
+class PagerDutyReporterTest extends \PHPUnit_Framework_TestCase
 {
     private $dut;
+
+    private $mockFactory, $mockLogger, $mockCheck;
 
     public function setUp()
     {
