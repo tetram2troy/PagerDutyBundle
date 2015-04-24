@@ -18,7 +18,6 @@ class PagerDutyEventCommand extends ContainerAwareCommand
         $this
             ->setName('pagerduty:event')
             ->setDescription('Sends an event to Pagerduty. Usefull for testing.')
-            //->addArgument('action', InputArgument::REQUIRED, 'Action')
             ->addArgument('name', InputArgument::REQUIRED, 'Alias to be sent to Pagerduty')
             ->addArgument('message', InputArgument::OPTIONAL, 'Message for the event')
         ;
@@ -29,7 +28,6 @@ class PagerDutyEventCommand extends ContainerAwareCommand
      */
     protected function execute(InputInterface $input, OutputInterface $output)
     {
-        //$action = $input->getArgument('action');
         $name = $input->getArgument('name');
         $message = $input->getArgument('message');
 
