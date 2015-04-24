@@ -3,7 +3,6 @@
 namespace LaFourchette\PagerDutyBundle\Tests\Factory;
 
 use LaFourchette\PagerDutyBundle\Factory\EventFactory;
-use LaFourchette\PagerDutyBundle\Tests\ProphecyTestCase;
 
 class EventFactoryTest extends \PHPUnit_Framework_TestCase
 {
@@ -20,7 +19,7 @@ class EventFactoryTest extends \PHPUnit_Framework_TestCase
         $serviceKey = '3858f62230ac3c915f300c664312c63f';
         $dut = new EventFactory();
         $dut->setServiceDefinitions(array(
-            'foo' => array('key' => $serviceKey)
+            'foo' => array('key' => $serviceKey),
         ));
 
         $event = $dut->make('foo', 'bar');
@@ -29,4 +28,4 @@ class EventFactoryTest extends \PHPUnit_Framework_TestCase
         $this->assertSame($serviceKey, $event->getServiceKey());
         $this->assertSame('bar', $event->getDescription());
     }
-} 
+}

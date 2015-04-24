@@ -29,10 +29,11 @@ class EventFactory
     }
 
     /**
-     * Factory method for PagerDuty\Event
+     * Factory method for PagerDuty\Event.
      *
      * @param string $serviceAlias ServiceAlias as defined in this bundle configuration.
-     * @param string $description Message to send to PagerDuty to explain the Event.
+     * @param string $description  Message to send to PagerDuty to explain the Event.
+     *
      * @return Event
      */
     public function make($serviceAlias, $description)
@@ -46,14 +47,17 @@ class EventFactory
 
     /**
      * @param string $serviceAlias ServiceAlias as defined in this bundle configuration.
+     *
      * @return string Service GUID key.
+     *
      * @throws PagerDutyBundleException
      */
     private function retrieveKeyFromAlias($serviceAlias)
     {
-        if(! isset($this->serviceDefinitions[$serviceAlias])){
+        if (! isset($this->serviceDefinitions[$serviceAlias])) {
             throw new PagerDutyBundleException("Unknown service definition for \"$serviceAlias\", please check your configuration.");
         }
+
         return $this->serviceDefinitions[$serviceAlias]['key'];
     }
 }

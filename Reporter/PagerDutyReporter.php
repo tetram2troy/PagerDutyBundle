@@ -21,7 +21,7 @@ class PagerDutyReporter implements ReporterInterface
     private $logger;
 
     /**
-     * @param EventFactory $pagerDuty Event factory.
+     * @param EventFactory    $pagerDuty Event factory.
      * @param LoggerInterface $logger
      */
     public function __construct(EventFactory $pagerDuty, LoggerInterface $logger)
@@ -40,11 +40,11 @@ class PagerDutyReporter implements ReporterInterface
         }
 
         if ($result instanceof Failure) {
-            try{
+            try {
                 $checkAlias = $check->getPagerDutyAlias();
                 $event = $this->pagerDuty->make($checkAlias, $result->getMessage());
                 $event->trigger();
-            } catch(\Exception $e) {
+            } catch (\Exception $e) {
                 $this->logger->alert($e);
             }
         }

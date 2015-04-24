@@ -7,14 +7,19 @@ use LaFourchette\PagerDutyBundle\Reporter\PagerDutyReporter;
 use Prophecy\Argument;
 use ZendDiagnostics\Check\CheckInterface;
 use ZendDiagnostics\Result\Failure;
-use ZendDiagnostics\Result\ResultInterface;
 use ZendDiagnostics\Result\Success;
 
 class MockCheck implements CheckInterface, PagerDutyCheckInterface
 {
-    public function check(){}
-    public function getLabel(){}
-    public function getPagerDutyAlias(){}
+    public function check()
+    {
+    }
+    public function getLabel()
+    {
+    }
+    public function getPagerDutyAlias()
+    {
+    }
 }
 
 class PagerDutyReporterTest extends \PHPUnit_Framework_TestCase
@@ -60,4 +65,4 @@ class PagerDutyReporterTest extends \PHPUnit_Framework_TestCase
             new Failure()
         );
     }
-} 
+}
