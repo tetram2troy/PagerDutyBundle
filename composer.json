@@ -4,7 +4,7 @@
     "require": {
         "nmcquay/pagerduty": "0.1.*",
         "symfony/framework-bundle": ">=2.0 <2.2",
-        "symfony/console": ">=2.0 <2.2"
+        "symfony/console": ">=2.0"
     },
     "require-dev": {
         "phpunit/phpunit": "~4.6",
