@@ -1,5 +1,5 @@
 {
-    "name": "lafourchette/pager-duty-bundle",
+    "name": "tetram2troy/pager-duty-bundle",
     "description": "Trigger PagerDuty events easily from your Symfony2 application.",
     "require": {
         "nmcquay/pagerduty": "0.1.*",
